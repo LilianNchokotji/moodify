@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Moodify {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("🎶 Welcome to Moodify!");
+        System.out.print("How are you feeling or what are you doing? ");
+        String mood = input.nextLine().toLowerCase();
+
+        String playlist = getPlaylist(mood);
+
+        System.out.println("\nHere’s your playlist suggestion: " + playlist);
+    }
+
+    // Method that gives playlist suggestions
+    public static String getPlaylist(String mood) {
+        switch (mood) {
+            case "happy":
+                return "😊 'Good Vibes Only' – upbeat pop & dance hits";
+            case "sad":
+                return "💧 'Mellow Moments' – soft piano & lo-fi tunes";
+            case "studying":
+                return "📚 'Focus Flow' – chill instrumental beats";
+            case "workout":
+                return "💪 'Beast Mode' – energetic hip-hop & EDM tracks";
+            case "relaxing":
+                return "🌙 'Calm Nights' – acoustic and slow jams";
+            default:
+                return "🎧 'Discover Weekly' – mixed moods for new vibes!";
+        }
+    }
+}
